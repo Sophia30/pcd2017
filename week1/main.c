@@ -18,7 +18,7 @@ int add(int a[],int n)
 
 int main() 
 {
-    int n ;
+    int n =10;
     int a[n];
     int res = add (a,b,c) ;
     printf("Result is: %d \n", res);
