@@ -1,15 +1,8 @@
-/* Welcome to the Interactive C Tutorial.
-Start by choosing a chapter and
-write your code in this window. */
-
 #include <stdio.h>
-
-
-
 int add(int a[],int n) 
 {
   	int sum = 0 ;
-    for(int i=0; i<=n; i++)
+    for(int i=0; i<n; i++)
     {
         sum += a[i] ;
     }
@@ -19,9 +12,9 @@ int add(int a[],int n)
 int main() 
 {
     int n =10;
-    int a[n];
-    int res = add (a,b,c) ;
+    int a[10] = {1,2,3,4,5,6,7,8,9,0};
+    int res = add (a,n) ;
     printf("Result is: %d \n", res);
     return 0;
 }
-    
+      
