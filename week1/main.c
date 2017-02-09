@@ -1,3 +1,5 @@
+//Program to find the sum of 'n' numbers
+
 #include <stdio.h>
 int add(int a[],int n) 
 {
