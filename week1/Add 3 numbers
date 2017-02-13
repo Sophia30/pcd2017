@@ -1,0 +1,17 @@
+// Add 3 numbers
+
+#include <stdio.h>
+int main() 
+{
+    int a,b,c,res;
+    a=5;
+    b=10;
+    c=15;
+    printf("Result: %d \n",add(a,b,c));
+    return 0 ;
+}
+
+int add (int a, int b, int c)
+{
+    return a+b+c;
+}
