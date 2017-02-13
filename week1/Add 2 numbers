@@ -1,0 +1,17 @@
+// Program to add 2 numbers
+
+#include <stdio.h>
+
+int main() 
+{
+    int a,b,res;
+    a=5;
+    b=10;
+    printf("Result: %d \n",add(a,b));
+    return 0 ;
+}
+
+int add (int a, int b)
+{
+    return a+b;
+}
