@@ -1,0 +1,28 @@
+#include<stdio.h>
+#include<math.h>
+#include<stdlib.h>
+
+int reverse (int n)
+ {
+	 int no, rev, num ;
+	 no = n ;
+	 rev = 0 ;
+	 while (no != 0)
+	  {
+		  num = 0 ;
+		  num = no % 10 ;
+		  rev = rev * 10 + num ;
+		  no /= 10 ;
+	  }
+	 return rev ;
+ }
+ 
+ int main ()
+  {
+	  int n , res ;
+	  printf ("Enter a number: ") ;
+	  scanf ("%i" , &n) ;
+	  res = reverse(n) ;
+	  printf ("Reversed number is: %i" , res) ;
+	  return 0 ;
+  }
