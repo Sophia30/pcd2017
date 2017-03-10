@@ -1,0 +1,33 @@
+#include<stdio.h>
+#include<math.h>
+#include<stdlib.h>
+
+int compute (int x, int a[], int n)
+ {
+  int sum = 0 ;
+  for (int i = n ; i > 0 ; i--)
+   {
+    sum = (sum + a[i]) * x ;
+   }
+   sum=sum+a[0];
+  return sum ;
+ }
+ 
+int main ()
+ {
+  int n ;
+  printf ("Enter the degree of the polynominal") ;
+  scanf ("%d" , &n) ;
+  int a[n+1] ;
+  printf ("Enter coefficients: ") ;
+  for (int i = 0 ; i <= n ; i++)
+   {
+    scanf ("%d" , &a[i]) ;
+   }
+   int x , sum ;
+   printf ("Enter 'x'") ;
+   scanf ("%d" , &x) ;
+   sum = compute (x, a, n) ;
+   printf ("y = %d" , sum) ;
+   return 0 ;
+ }
