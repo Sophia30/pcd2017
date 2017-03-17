@@ -16,7 +16,7 @@ int reverse (int n)
 	  }
 	 return rev ;
  }
- 
+  
  int main ()
   {
 	  int n , res ;
@@ -24,5 +24,13 @@ int reverse (int n)
 	  scanf ("%i" , &n) ;
 	  res = reverse(n) ;
 	  printf ("Reversed number is: %i" , res) ;
+	  if (res == n)
+	   {
+		   printf("\nIt is a Palindrome") ;
+	   }
+	  else
+	   {
+		   printf("\nIt is Not a Palindrome") ;
+	   }
 	  return 0 ;
   }
