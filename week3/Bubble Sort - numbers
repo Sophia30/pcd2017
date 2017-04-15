@@ -1,0 +1,48 @@
+#include<stdio.h>
+#include<stdlib.h>
+
+void input(int a[50], int n)
+ {
+  printf("Enter the numbers: ");
+  for(int i=0; i<n; i++)
+  {
+   scanf("%d", &a[i]);
+  }
+ }
+ 
+void output(int a[50], int n)
+  {
+   printf("Numbers after  Sorting  are: \n");
+   for(int i=0; i<n;i++)
+    {
+     printf("%d", a[i]);
+    }
+  }
+  
+int Bubble(int a[50], int n)
+   {
+    for(int i=0; i<n-1; i++)
+    {
+     for(int j=0; j<(n-1-i); j++)
+     {
+      if(a[j]>a[j+1])
+      {
+       t=a[j];
+       a[j]=a[j+1];
+       a[j+1]=t;
+      }
+    }
+  }
+}
+   
+int main()
+ {
+  int a[50],n,I,O,B;
+  printf("Enter the no. of nos.: \n");
+  scanf("%d", &n);
+  I=input(a,n);
+  B=Bubble(a,n);
+  O=output(a,n);
+   return 0 ;
+ }
+ 
