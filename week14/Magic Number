@@ -1,0 +1,39 @@
+// Find sum of the digits of the number
+// If sum of the digits contain more than 2 digits, the find the sum of the digits again
+// Keep doing the above step until sum of the digits is a single digit number
+// Print 'Magic Number' if sum obtained in the single digit is 1, otherwise 'Not a Magic Number'
+
+// EX: 55 -> 5+5=10 -> 1+0=1 -> Magic Number
+
+
+#include<stdio.h>
+#include<stdlib.h>
+#include<math.h>
+
+int main()
+ {
+  int s, n, r;
+  printf("Enter a number: ");
+  scanf("%d", &n);
+  s=n;
+  while(s>9)
+   { 
+    n=s;
+    s=0;
+    while(n!=0)
+     {
+      r=n%10;
+      s+=r;
+      n/=10;
+     }
+   }
+  if(s==1)
+   {
+    printf("It is a Magic Number");
+   }
+  else
+   {
+    printf("It is not a Magic Number");
+   }
+  return 0; 
+ }
