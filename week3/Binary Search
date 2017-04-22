@@ -1,0 +1,40 @@
+#include<string.h>
+#include<stdio.h>
+#include<stdlib.h>
+
+int main()
+{
+	int f,l,n,m,res;
+	char s[30][30], search[30];
+	printf("Enter the number of names:");
+	scanf("%d",&n);
+	printf("Enter the names:");
+	for(int i = 0; i<n; i++)
+	{
+	    scanf("%s", s[i]);
+	}
+	f=0, l=n-1;
+	printf("Enter the name to be searched:");
+	scanf("%s",search);
+	while(f<=l)
+	{
+		m=(f+l)/2;
+		res=strcmp(search,s[m]);
+		if(res==0)
+		{
+			printf("String found at %d position", (m+1));
+			return 0;
+		}
+		else
+		if(res>0)
+		{
+			f=m+1;
+		}
+		else
+		{
+			l=m-1;
+		}
+	}
+	printf("Name not found");
+	return 0;
+}
