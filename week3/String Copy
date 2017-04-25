@@ -1,0 +1,15 @@
+#include<stdio.h>
+#include<stdlib.h>
+
+int main()
+{
+	char str1[50], str2[50];
+	int x;
+	printf("Enter string: ");
+	scanf("%[^\n]" , str1);
+	for(x=0;str1[x]!='\0';x++)
+		str2[x]=str1[x];
+	str2[x]='\0';
+	printf("Copied string: %s \n", str2);
+	return 0;
+}
