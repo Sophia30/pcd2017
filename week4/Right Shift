@@ -1,0 +1,20 @@
+#include<stdio.h>
+#include<stdlib.h>
+
+int rightshift(int num,int n)
+{
+	n = n%(sizeof(int)*8);
+	int len = sizeof(int)*8-n;
+	return num>>n|num<<len;
+}
+
+int main()
+{
+	int num,n;
+	printf("Enter the number:");
+	scanf("%d",&num);
+	printf("Enter by how many positions you want to shift:");
+	scanf("%d",&n);
+	printf("%d\n",rightshift(num,n));
+	return 0;
+}
