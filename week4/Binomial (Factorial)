@@ -1,0 +1,36 @@
+#include<stdio.h>
+#include<stdlib.h>
+
+long int fact(long int n)
+{
+	if(n==0||n==1)
+		return 1;
+	return n*fact(n-1);
+}
+
+int main()
+{
+	long int n, r, factl;
+	double ncr;
+	printf("Enter the values of n and r: \n");
+	scanf("%ld %ld", &n, &r);
+	if(n<=r)
+	{
+		printf("Error! Value of n should not be lesser than r \n");
+		return 0;
+	}
+	else
+	if(n<0||r<0)
+	{
+		printf("Error! Value of n and r should not be negative \n");
+		return 0;
+	}
+	else
+	{
+		factl=fact(n);
+		printf("Factorial of %ld is: %ld\n", n,factl);
+		ncr=fact(n)/(fact(n-r)*fact(r));
+		printf("\n%ld C %ld + %0lf\n" ,n,r,ncr);
+	}
+	return 0;
+}
